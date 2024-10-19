@@ -6,6 +6,8 @@
 #define HDPT_WHEELS  "wheels"
 #define HDPT_TURRET  "turret"
 #define HDPT_SPECIAL "special" //special pre-installed hardpoints with unique behaviour
+#define HDPT_OPTICS "optics" //field gun only
+#define HDPT_TRAIL "trail" //field gun only
 
 #define HDPT_LAYER_WHEELS   0.01 // so it appears below xenomorphs and other mobs
 #define HDPT_LAYER_SUPPORT  2
