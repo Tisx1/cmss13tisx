@@ -10,6 +10,7 @@
 	health = 500
 	firing_arc = 70
 
+	ammo = new /obj/item/ammo_magazine/hardpoint/lightcannon
 	max_clips = 1
 
 	origins = list(0, 0)

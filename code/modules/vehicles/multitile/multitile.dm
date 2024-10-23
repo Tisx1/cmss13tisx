@@ -142,6 +142,9 @@
 	//Exits will be loaded by the interior manager and sorted by tag to match
 	var/list/entrances = list()
 
+	//gun breach location(s) for open top vehicles
+	var/list/breach = list()
+
 	var/list/misc_multipliers = list(
 		"move" = 1.0,
 		"accuracy" = 1.0,
