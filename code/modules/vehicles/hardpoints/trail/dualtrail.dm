@@ -6,4 +6,6 @@
 	disp_icon = "fieldgun"
 	disp_icon_state = "dualtrail"
 
+	total_anchorpoints = 2
+
 	health = 1000

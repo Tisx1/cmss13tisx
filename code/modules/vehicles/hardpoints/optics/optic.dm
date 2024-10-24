@@ -6,4 +6,7 @@
 	disp_icon = "fieldgun"
 	disp_icon_state = "sight"
 
+	view_buff = 14
+	view_tile_offset = 7
+
 	health = 250

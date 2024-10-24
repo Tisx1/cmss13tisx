@@ -128,6 +128,15 @@
 	/// The type of projectile to fire
 	var/projectile_type = /obj/projectile
 
+	///FIELDGUN VARS
+
+	/// Does the vehicle require anchoring points
+	var/anchor_required = FALSE
+	/// How many anchorpoints are active?
+	var/anchorpoints = 0
+	// How many anchorpoints are needed for firing?
+	var/anchorpoints_needed = 0
+
 //-----------------------------
 //------GENERAL PROCS----------
 //-----------------------------
