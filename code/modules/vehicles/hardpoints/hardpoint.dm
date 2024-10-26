@@ -136,6 +136,12 @@
 	var/anchorpoints = 0
 	// How many anchorpoints are needed for firing?
 	var/anchorpoints_needed = 0
+	/// How many anchoring points we have total both active or unactive
+	var/total_anchorpoints = 0
+	/// How much time it takes in seconds for ONE anchoring point to fully anchor
+	var/anchoring_time = 10 SECONDS
+	/// How much time it takes in seconds for ONE anchoring point to fully unanchor
+	var/unanchoring_time = 10 SECONDS
 
 //-----------------------------
 //------GENERAL PROCS----------
@@ -589,7 +595,14 @@
 		to_chat(user, SPAN_WARNING("<b>The target is not within your firing arc!</b>"))
 		return NONE
 
+	if(anchor_required)
+		if(anchorpoints != anchorpoints_needed)
+			to_chat(user, SPAN_WARNING("<b>The [name] is not secured, you need [anchorpoints_needed] anchoring points!"))
+			return NONE
+
 	return handle_fire(target, user, params)
+
+
 
 /// Actually fires the gun, sets up the projectile and fires it.
 /obj/item/hardpoint/proc/handle_fire(atom/target, mob/living/user, params)

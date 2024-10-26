@@ -7,5 +7,7 @@
 	disp_icon_state = "dualtrail"
 
 	total_anchorpoints = 2
+	anchoring_time = 1 SECONDS
+	unanchoring_time = 1 SECONDS
 
 	health = 1000

@@ -2425,6 +2425,7 @@
 #include "code\modules\vehicles\arc\interior.dm"
 #include "code\modules\vehicles\arc\verbs.dm"
 #include "code\modules\vehicles\fieldgun\fieldgun.dm"
+#include "code\modules\vehicles\fieldgun\verbs.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint.dm"
 #include "code\modules\vehicles\hardpoints\armor\armor.dm"
 #include "code\modules\vehicles\hardpoints\armor\ballistic.dm"

@@ -9,6 +9,10 @@
 
 	health = 500
 	firing_arc = 70
+	anchor_required = TRUE
+	anchorpoints_needed = 2
+	anchorpoints = 0
+
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/lightcannon
 	max_clips = 1

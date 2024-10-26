@@ -38,6 +38,11 @@
 
 	vehicle_light_range = 1
 
+	var/trail_deployed = FALSE
+
+
+
+
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/primary/lightcannon,
 		/obj/item/hardpoint/support/supp,
@@ -124,6 +129,8 @@
 		/obj/vehicle/multitile/proc/activate_horn,
 		/obj/vehicle/multitile/proc/switch_hardpoint,
 		/obj/vehicle/multitile/proc/cycle_hardpoint,
+		/obj/vehicle/multitile/fieldgun/proc/deploy_trail,
+		/obj/vehicle/multitile/fieldgun/proc/undeploy_trail,
 	))
 
 /obj/vehicle/multitile/fieldgun/remove_seated_verbs(mob/living/M, seat)
@@ -136,8 +143,16 @@
 		/obj/vehicle/multitile/proc/activate_horn,
 		/obj/vehicle/multitile/proc/switch_hardpoint,
 		/obj/vehicle/multitile/proc/cycle_hardpoint,
+		/obj/vehicle/multitile/fieldgun/proc/deploy_trail,
+		/obj/vehicle/multitile/fieldgun/proc/undeploy_trail,
 	))
 	SStgui.close_uis(M, src)
+
+/obj/vehicle/multitile/fieldgun/relaymove(mob/user, direction)
+	if(trail_deployed)
+		return FALSE
+
+	return ..()
 
 /obj/vehicle/multitile/fieldgun/attackby(obj/item/O, mob/user)
 	if(!istype(O, /obj/item/ammo_magazine/hardpoint))
