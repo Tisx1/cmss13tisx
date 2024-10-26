@@ -23,8 +23,9 @@
 	passengers_slots = 0
 	xenos_slots = 0
 
-	breach = list(0,1)
-
+	breach = list(
+		"rear close" = list(0,1),
+	)
 	entrances = null
 
 
@@ -183,8 +184,16 @@
 
 	if(!user || !istype(user))
 		return
+	var/mob_x = user.x - src.x
+	var/mob_y = user.y - src.y
 
-	handle_reload(user)
+	for(var/B in breach)
+		var/breach_coord = breach[B]
+		if(mob_x == breach_coord[1] && mob_y == breach_coord[2])
+			handle_reload(user)
+			return
+		break
+	. = ..()
 
 /obj/vehicle/multitile/fieldgun/proc/reload_ammo()
 	set name = "Reload Ammo"
