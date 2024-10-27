@@ -145,6 +145,8 @@
 	//gun breach location(s) for open top vehicles
 	var/list/breach = list()
 
+	var/list/mob_loc = list()
+
 	var/list/misc_multipliers = list(
 		"move" = 1.0,
 		"accuracy" = 1.0,

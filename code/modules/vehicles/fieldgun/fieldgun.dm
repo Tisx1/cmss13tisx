@@ -28,6 +28,10 @@
 	)
 	entrances = null
 
+	mob_loc = list(
+		"left" = list(1,1),
+	)
+
 
 	movement_sound = 'sound/vehicles/tank_driving.ogg'
 	honk_sound = 'sound/vehicles/honk_2_truck.ogg'
@@ -93,6 +97,7 @@
 	..()
 	handle_afterbuckle(M)
 
+
 /obj/vehicle/multitile/fieldgun/proc/handle_afterbuckle(mob/M)
 
 	if(!vehicle)
@@ -101,9 +106,6 @@
 	if(QDELETED(buckled_mob))
 		M.unset_interaction()
 		vehicle.set_seated_mob(seat, null)
-		if(M.client)
-			M.client.pixel_x = 0
-			M.client.pixel_y = 0
 	else
 		if(M.stat != CONSCIOUS)
 			unbuckle()

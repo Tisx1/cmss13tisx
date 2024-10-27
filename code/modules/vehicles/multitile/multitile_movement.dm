@@ -99,6 +99,7 @@
 	rotate_entrances(deg)
 	rotate_breach(deg)
 	rotate_bounds(deg)
+	rotate_mob(deg)
 	setDir(turn(dir, deg))
 
 	last_move_dir = dir
@@ -180,6 +181,9 @@
 
 /obj/vehicle/multitile/proc/rotate_breach(deg)
 	breach = rotate_origins(deg, breach)
+
+/obj/vehicle/multitile/proc/rotate_mob(deg)
+	mob_loc = rotate_origins(deg, mob_loc)
 
 /obj/vehicle/multitile/proc/rotate_hardpoints(deg, update_icons = TRUE, list/specific_hardpoints = null)
 	if(specific_hardpoints)

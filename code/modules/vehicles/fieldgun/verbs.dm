@@ -36,12 +36,10 @@
 		to_chat(user, SPAN_WARNING ("[vehicle] doesn't have more anchoring points!"))
 		return
 	else
-		to_chat(user, SPAN_WARNING ("TEST"))
 		T.deploying = TRUE
 		T.deploy_trail(toggler)
 		vehicle.trail_deployed = TRUE
 		T.deploying = FALSE
-		to_chat(user, SPAN_WARNING ("TEST done"))
 		return
 
 
@@ -82,13 +80,11 @@
 	if(T.anchorpoints == 0)
 		to_chat(user, SPAN_WARNING("[vehicle] has no more anchor points to remove!"))
 	else
-		to_chat(user, SPAN_WARNING ("TEST"))
 		T.deploying = TRUE
 		T.undeploy_trail(toggler)
 		if(T.anchorpoints == 0)
 			vehicle.trail_deployed = FALSE
 		T.deploying = FALSE
-		to_chat(user, SPAN_WARNING ("TEST done"))
 		return
 
 
